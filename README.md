@@ -57,7 +57,12 @@ pip install torchmetrics scikit-learn albumentations matplotlib tensorboard
 The training script saves the model weights with the highest mAP@0.5 on the validation set to best_faster_rcnn_weights.pth.
 ```
 # Run training for the Improved Model (Logs indicate you ran this version)
-python Faster_R-CNN_Improved.py
+python Faster_R-CNN_Improved\train.py
+```
+### Running Testing
+```
+# Run testing for the Improved Model (Logs indicate you ran this version)
+python Faster_R-CNN_Improved\test.py
 ```
 ## 4. Improved Model Training Results Summary (30 Epochs)
 | Metric | Best Validation Performance (Epoch 13) | Final Test Set Performance |
