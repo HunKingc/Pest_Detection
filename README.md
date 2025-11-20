@@ -53,13 +53,24 @@ pip install torchmetrics scikit-learn albumentations matplotlib tensorboard
     * **LR Scheduler**: CosineAnnealingLR (Min LR: $1 \times 10^{-6}$)
     * **Data Augmentation**: Only pixel-level transformations retained (removed geometric to stabilize bounding box regression)
     * **Gradient Clipping**: `max_norm = 5.0`
-### Running Training
+### Running Faster_R-CNN Training
+The training script saves the model weights with the highest mAP@0.5 on the validation set to best_faster_rcnn_weights.pth.
+```
+# Run training for the basic Model (Logs indicate you ran this version)
+python Faster_R-CNN\train.py
+```
+### Running Faster_R-CNN Testing
+```
+# Run testing for the basic Model (Logs indicate you ran this version)
+python Faster_R-CNN\test.py
+```
+### Running Faster_R-CNN_Improved Training
 The training script saves the model weights with the highest mAP@0.5 on the validation set to best_faster_rcnn_weights.pth.
 ```
 # Run training for the Improved Model (Logs indicate you ran this version)
 python Faster_R-CNN_Improved\train.py
 ```
-### Running Testing
+### Running Faster_R-CNN_Improved Testing
 ```
 # Run testing for the Improved Model (Logs indicate you ran this version)
 python Faster_R-CNN_Improved\test.py
